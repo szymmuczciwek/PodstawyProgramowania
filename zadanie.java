@@ -1,20 +1,16 @@
+import java.util.Scanner;
+
 public class zadanie {
     public static void main(String[] args) {
-        int[] liczby = {5, 10, 15, 20, 25};
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Podaj liczbę całkowitą:");
+        int liczba = scanner.nextInt();
 
-        int suma = 0;
-        for (int liczba : liczby) {
-            suma += liczba;
+        if (liczba % 2 == 0) {
+            System.out.println("Podana liczba " + liczba + " jest parzysta.");
+        } else {
+            System.out.println("Podana liczba " + liczba + " jest nieparzysta.");
         }
-
-        double srednia = (double) suma / liczby.length;
-
-        System.out.println("Tablica liczb całkowitych:");
-        for (int liczba : liczby) {
-            System.out.print(liczba + " ");
-        }
-        System.out.println("\nSuma: " + suma);
-        System.out.println("Średnia: " + srednia);
     }
 }
